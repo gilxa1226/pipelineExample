@@ -1,12 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('') {
-      steps {
-        nodejs('C:\\Program Files\\nodejs') {
-          sh 'npm install'
-        }
+  agent {
+    node {
+      label 'npminstall'
+    }
 
+  }
+  stages {
+    stage('npm install') {
+      steps {
+        sh 'npm install'
       }
     }
   }
