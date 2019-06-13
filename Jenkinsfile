@@ -1,9 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('npm install') {
+    stage('') {
       steps {
-        sh 'npm install'
+        nodejs('C:\\Program Files\\nodejs') {
+          sh 'npm install'
+        }
+
       }
     }
   }
