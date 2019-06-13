@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'npminstall'
-    }
-
-  }
+  agent any
   stages {
     stage('npm install') {
       steps {
