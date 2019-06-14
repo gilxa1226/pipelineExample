@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'ng test --single-run true'
+        sh 'ng test --watch=false'
       }
     }
   }
