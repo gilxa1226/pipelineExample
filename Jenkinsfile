@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'ng e2e'
+        sh 'ng test --single-run true'
       }
     }
   }
