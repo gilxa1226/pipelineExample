@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Code Quality') {
           steps {
-            sh '''/Users/haller/Applications/sonarqube-7.7/bin/macosx-universal-64/sonar.sh \\
+            sh '''/Users/haller/Applications/sonar-scanner-3.3.0.1492-macosx/bin/sonar-scanner \\
   -Dsonar.projectKey=pipelineExample \\
   -Dsonar.sources=. \\
   -Dsonar.host.url=http://localhost:9000 \\
