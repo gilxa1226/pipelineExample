@@ -16,7 +16,6 @@ pipeline {
         }
         stage('Code Quality') {
           steps {
-            withSonarQubeEnv(installationName: 'SonarQubePipelineExample', credentialsId: 'caf7e6ca5be6445c795559bc6a6edc9db1f82fe4')
             sh '''/Users/haller/Applications/sonar-scanner-3.3.0.1492-macosx/sonar-scanner \\
   -Dsonar.projectKey=pipelineExample \\
   -Dsonar.sources=. \\
