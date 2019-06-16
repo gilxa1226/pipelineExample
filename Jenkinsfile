@@ -27,7 +27,10 @@ pipeline {
     }
     stage('Docker') {
       steps {
-        sh 'docker build -t gilxa1226/pipelineexample .'
+        sh '''
+ls &&
+
+docker build -t gilxa1226/pipelineexample .'''
       }
     }
   }
