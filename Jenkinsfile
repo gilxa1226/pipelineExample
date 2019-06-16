@@ -23,6 +23,11 @@ pipeline {
   -Dsonar.login=caf7e6ca5be6445c795559bc6a6edc9db1f82fe4'''
           }
         }
+        stage('Test Coverage') {
+          steps {
+            sh 'ng test --codeCoverage=true'
+          }
+        }
       }
     }
   }
