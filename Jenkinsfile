@@ -10,7 +10,7 @@ pipeline {
       parallel {
         stage('Test') {
           steps {
-            sh 'ng test --watch=false'
+            sh 'ng test --watch=false --codeCoverage=true'
             sh 'ng e2e --port 4201'
           }
         }
@@ -21,11 +21,6 @@ pipeline {
   -Dsonar.sources=. \\
   -Dsonar.host.url=http://localhost:9000 \\
   -Dsonar.login=caf7e6ca5be6445c795559bc6a6edc9db1f82fe4'''
-          }
-        }
-        stage('Test Coverage') {
-          steps {
-            sh 'ng test --codeCoverage=true'
           }
         }
       }
