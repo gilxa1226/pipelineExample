@@ -25,5 +25,10 @@ pipeline {
         }
       }
     }
+    stage('Docker') {
+      steps {
+        sh 'docker build -t gilxa1226/pipelineExample'
+      }
+    }
   }
 }
