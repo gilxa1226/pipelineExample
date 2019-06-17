@@ -1,3 +1,3 @@
 FROM nginx
 
-COPY dist/pipelineExample/* /usr/share/nginx/html
+COPY dist/pipelineExample/* /usr/share/nginx/html/
