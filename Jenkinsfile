@@ -28,7 +28,8 @@ pipeline {
     stage('Docker') {
       steps {
         sh '''
-ls &&
+npm install && 
+ng build &&
 
 docker build -t gilxa1226/pipelineexample .'''
       }
