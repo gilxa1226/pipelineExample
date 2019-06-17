@@ -32,6 +32,8 @@ npm install &&
 ng build &&
 
 docker build -t gilxa1226/pipelineexample .'''
+        sh '''docker login &&
+docker push gilxa1226/pipelineexample'''
       }
     }
   }
