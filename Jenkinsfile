@@ -38,7 +38,7 @@ docker push gilxa1226/pipelineexample'''
     }
     stage('Security') {
       steps {
-        sh '/Users/haller/Applications/clair-scanner/clair-scanner --clair="http://10.84.67.9:6060" --ip="10.84.67.9" gilxa1226/pipelineexample:latest'
+        sh '--clair="http://127.0.0.1:6060" --ip="127.0.0.1" gilxa1226/pipelineexample:latest'
       }
     }
   }
