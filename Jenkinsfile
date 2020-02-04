@@ -22,7 +22,6 @@ node(label) {
       container('node') {
         sh """
           ng test --watch=false --codeCoverage=true
-          ng e2e --port 4201
         """
       }
     }
