@@ -1,7 +1,7 @@
 def label = "worker-${UUID.randomUUID().toString()}"
 podTemplate(label: label, containers: [
   containerTemplate(name: 'docker', image: 'docker', command: 'cat', ttyEnabled: true),
-  containerTemplate(name: 'node', image: 'node', command: 'cat', ttyEnabled: true)
+  containerTemplate(name: 'node', image: 'node', command: 'cat', ttyEnabled: true),
   containerTemplate(name: 'klar', image: 'localhost:5000/klar', command: 'cat', ttyEnabled: true)
 ],
 volumes: [
