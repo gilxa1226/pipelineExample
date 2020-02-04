@@ -10,16 +10,22 @@ volumes: [
 
 node(label) {
     stage('Prepare Code Base') {
-      sh 'npm install'
+      container('node') {
+        sh 'npm install'
+      }
     }
     stage('Test') {
-      sh """
-        ng test --watch=false --codeCoverage=true
-        ng e2e --port 4201
-      """
+      container('node') {
+        sh """
+          ng test --watch=false --codeCoverage=true
+          ng e2e --port 4201
+        """
+      }
     }
     stage('Build Artifacts') {
-      sh 'ng build'
+      container('node') {
+        sh 'ng build'
+      }
     }
     stage('Build') {
       container('docker') {
