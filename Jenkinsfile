@@ -47,7 +47,7 @@ node(label) {
     stage('Scan Image') {
       container('klar') {
         sh """
-          JSON_OUTPUT=true /klar localhost:5000/example-app:security 
+          CLAIR_ADDR=clair-1580761905-clair JSON_OUTPUT=true /klar localhost:5000/example-app:security 
         """
       }
     }
