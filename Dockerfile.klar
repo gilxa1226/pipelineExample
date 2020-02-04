@@ -1,0 +1,4 @@
+FROM debian
+RUN apt-get update && apt-get install -y curl wget jq
+RUN wget -q -O klar https://github.com/optiopay/klar/releases/download/v2.4.0/klar-2.4.0-linux-amd64
+RUN chmod +x ./klar
