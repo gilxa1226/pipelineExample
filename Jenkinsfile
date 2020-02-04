@@ -9,6 +9,9 @@ volumes: [
 ]) {
 
 node(label) {
+    stage('Checkout') {
+      checkout scm
+    }
     stage('Prepare Code Base') {
       container('node') {
         sh 'npm install'
