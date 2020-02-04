@@ -12,6 +12,7 @@ node(label) {
     stage('Prepare Code Base') {
       container('node') {
         sh 'npm install'
+        sh 'npm install @angular/cli'
       }
     }
     stage('Test') {
