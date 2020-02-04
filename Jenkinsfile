@@ -48,9 +48,8 @@ node(label) {
       container('klar') {
         sh """
           echo "Scanning"
-          CLAIR_ADDR=clair-1580761905-clair DOCKER_INSECURE=true JSON_OUTPUT=true /klar localhost:5000/example-app:security 
         """
-        
+        //CLAIR_ADDR=clair-1580761905-clair DOCKER_INSECURE=true JSON_OUTPUT=true /klar localhost:5000/example-app:security 
       }
     }
     stage('Push to Prod Registry') {
